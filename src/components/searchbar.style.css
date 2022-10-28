@@ -1,0 +1,42 @@
+.searchbar {
+  display: inline-block;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: white;
+  font-size: 16px;
+  padding-left: 35px;
+}
+
+.input:focus {
+  border: 2px solid #02abde;
+}
+
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  color: white;
+}

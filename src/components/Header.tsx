@@ -8,11 +8,15 @@ const Header = () => {
   return (
     <header className="header">
       <div className="inner-header">
-        <IconLink link="/" icon={<Logo />} labelledby="logo" />
-        <Searchbar />
-        <IconLink link="/signup">
-          <MainButton role="link" innerText="Log in/Sign up" />
-        </IconLink>
+        <div className="left-part">
+          <IconLink link="/" icon={<Logo />} labelledby="logo" />
+        </div>
+        <div className="right-part">
+          <Searchbar />
+          <IconLink link="/signup">
+            <MainButton role="link" innerText="Log in/Sign up" />
+          </IconLink>
+        </div>
       </div>
     </header>
   );

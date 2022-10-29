@@ -1,0 +1,23 @@
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.info-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-row:hover {
+  background-color: #21272f;
+}
+
+.grid {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

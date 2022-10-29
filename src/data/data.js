@@ -1,18 +1,34 @@
-export const data = {
-  banca_transilvania: {
-    revenue: [
-      606479162, 664242578, 909595860, 1451932867, 1526658007, 1514720331, 1588353753, 1653156406,
-      1933075503, 1796118981, 1749911276, 1648408468, 1899936453, 2129744920, 2379424484,
-      2448712083, 3118375073,
-    ],
-    netIncome: [
-      23702435, 64338265, 88674867, 103039781, 49358088, 16090651, 95036272, 34469000, 423391480,
-      133064655, 149143729, 112449451, 303876268, 410611215, 535667264, 699322229, 1036261626,
-    ],
-    debt: [
-      2500989786, 2758269970, 2845846319, 2707474160, 2676694964, 2708538225, 2575352401,
-      2608807059, 2390944658, 2148811285, 1842203287, 1623287931, 1426019014, 1307479767,
-      1041923608, 885933746, 816243784,
-    ],
+import React from "react";
+import SNGLogo from "../assets/SNGLogo";
+import SNPLogo from "../assets/SNPLogo";
+import TLVLogo from "../assets/TLVLogo";
+
+export const data = [
+  {
+    name: "Banca transilvania",
+    link: "/ro/tlv",
+    icon: <TLVLogo />,
+    price: 15,
+    valuation: "12b",
+    divYield: 6,
+    industry: "Energy",
   },
-};
+  {
+    name: "OMV Petrom",
+    link: "/ro/snp",
+    icon: <SNPLogo />,
+    price: 0.41,
+    valuation: "12b",
+    divYield: 6,
+    industry: "Energy",
+  },
+  {
+    name: "Romgaz",
+    link: "/ro/sng",
+    icon: <SNGLogo />,
+    price: 35,
+    valuation: "12b",
+    divYield: 6,
+    industry: "Energy",
+  },
+];

@@ -10,7 +10,7 @@ const Searchbar = ({ placeholder }: IProps) => {
   return (
     <div className="searchbar">
       <div className="flex">
-        <input placeholder={placeholder} className="input" type="search" />
+        <input placeholder={placeholder} className="input" type="search" aria-label="Search" />
         <div className="search-icon">
           <HiSearch color="#02abde" />
         </div>

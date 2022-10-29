@@ -10,18 +10,19 @@
 }
 
 .input {
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #21272f;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   outline: none;
   border-radius: 6px;
   padding: 5px 10px;
   color: white;
   font-size: 16px;
+  transition: all 0.25s ease-in-out;
   padding-left: 35px;
 }
 
 .input:focus {
-  border: 2px solid #02abde;
+  background-color: #171c22;
 }
 
 .search-icon {

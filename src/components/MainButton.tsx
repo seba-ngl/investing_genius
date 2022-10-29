@@ -1,4 +1,4 @@
-import "./mainButton.style.css";
+import "./mainButton.style.scss";
 
 type IProps = {
   innerText?: string;

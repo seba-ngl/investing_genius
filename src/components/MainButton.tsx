@@ -7,9 +7,9 @@ type IProps = {
 
 const MainButton = ({ innerText, role }: IProps) => {
   return role === "link" ? (
-    <div className="main-button">{innerText}</div>
+    <div className="main-button-component">{innerText}</div>
   ) : (
-    <div role={role} tabIndex={0} className="main-button">
+    <div role={role} tabIndex={0} className="main-button-component">
       {innerText}
     </div>
   );

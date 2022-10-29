@@ -6,7 +6,7 @@ import Searchbar from "./Searchbar";
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="header-component">
       <div className="inner-header">
         <div className="left-part">
           <IconLink link="/" icon={<Logo />} labelledby="logo" />

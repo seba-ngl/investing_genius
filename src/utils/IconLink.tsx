@@ -9,7 +9,7 @@ type IProps = {
 
 const IconLink = ({ link, icon, labelledby, children }: IProps) => {
   return (
-    <Link aria-labelledby={labelledby} to={link} role="link">
+    <Link aria-labelledby={labelledby} to={link} role="link" className="iconlink-util">
       {icon}
       {children}
     </Link>

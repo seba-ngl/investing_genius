@@ -4,12 +4,14 @@ type IProps = {
   link: string;
   icon?: React.ReactNode;
   labelledby?: string;
+  children?: React.ReactNode;
 };
 
-const IconLink = ({ link, icon, labelledby }: IProps) => {
+const IconLink = ({ link, icon, labelledby, children }: IProps) => {
   return (
     <Link aria-labelledby={labelledby} to={link} role="link">
       {icon}
+      {children}
     </Link>
   );
 };

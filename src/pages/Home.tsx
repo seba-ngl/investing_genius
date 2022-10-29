@@ -1,13 +1,7 @@
-import Searchbar from "../components/Searchbar";
-import "./home.style.css";
+import "./home.style.scss";
 
 const Home = () => {
-  return (
-    <div className="home">
-      Home
-      <Searchbar />
-    </div>
-  );
+  return <div className="home">Home</div>;
 };
 
 export default Home;

@@ -4,6 +4,7 @@ export const themes = {
       text: {
         color: {
           lightblue: "#02abde",
+          darkblue: "#02abde",
         },
       },
       background: {

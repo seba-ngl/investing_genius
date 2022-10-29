@@ -5,30 +5,45 @@ import TLVLogo from "../assets/TLVLogo";
 
 export const data = [
   {
-    name: "Banca transilvania",
-    link: "/ro/tlv",
-    icon: <TLVLogo />,
-    price: 15,
-    valuation: "12b",
-    divYield: 6,
-    industry: "Energy",
+    unusedTable: {
+      symbol: "tlv",
+      market: "ro",
+    },
+    usedTable: {
+      name: "Banca transilvania",
+      icon: <TLVLogo />,
+      price: 15,
+      valuation: "12b",
+      divYield: 6,
+      industry: "Energy",
+    },
   },
   {
-    name: "OMV Petrom",
-    link: "/ro/snp",
-    icon: <SNPLogo />,
-    price: 0.41,
-    valuation: "12b",
-    divYield: 6,
-    industry: "Energy",
+    unusedTable: {
+      symbol: "snp",
+      market: "ro",
+    },
+    usedTable: {
+      name: "OMV Petrom",
+      icon: <SNPLogo />,
+      price: 15,
+      valuation: "12b",
+      divYield: 6,
+      industry: "Energy",
+    },
   },
   {
-    name: "Romgaz",
-    link: "/ro/sng",
-    icon: <SNGLogo />,
-    price: 35,
-    valuation: "12b",
-    divYield: 6,
-    industry: "Energy",
+    unusedTable: {
+      symbol: "sng",
+      market: "ro",
+    },
+    usedTable: {
+      name: "Romgaz",
+      icon: <SNGLogo />,
+      price: 15,
+      valuation: "12b",
+      divYield: 6,
+      industry: "Energy",
+    },
   },
 ];

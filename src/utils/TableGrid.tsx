@@ -11,32 +11,33 @@ const TableGrid = ({ data, numberOfColumns }: IProps) => {
     <div className="table-grid-util">
       <InfoRow />
       <div className="table-body">
-        {data.map((obj: Object, key: number) => (
+        {data.map((obj: any, key: number) => (
           <Row object={obj} numberOfColumns={numberOfColumns} key={key} />
         ))}
       </div>
     </div>
   );
 };
-
 const Row = ({ object, numberOfColumns }: any) => {
-  return object.name ? (
-    <Link to={object.link} tabIndex={-1}>
+  return object.usedTable.name ? (
+    <Link to={`${object.unusedTable.market}/${object.unusedTable.symbol}`}>
       <button
-        aria-label={object.name}
+        tabIndex={-1}
+        aria-label={object.usedTable.name}
         className="grid data-row"
         style={{
           gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
         }}
       >
-        {Object.keys(object).map(key => {
-          return key !== "name" && key !== "link" ? <div key={key}>{object[key]}</div> : "";
+        {Object.keys(object.usedTable).map(key => {
+          return key !== "name" ? <div key={key}>{object.usedTable[key]}</div> : "";
         })}
       </button>
     </Link>
   ) : (
-    <Link to={object.link} tabIndex={-1}>
+    <Link to={`${object.unusedTable.market}/${object.unusedTable.symbol}`}>
       <button
+        tabIndex={-1}
         aria-label="no aria"
         className="grid data-row"
         style={{

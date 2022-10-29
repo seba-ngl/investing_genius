@@ -13,7 +13,7 @@ const SingleStock = () => {
       <div className="stock-right-part">
         <div className=""></div>
       </div>
-      <div className="stock-left-part"></div>
+      <div className="stock-left-part">s</div>
       {/* <div>{currentStock?.usedTable.icon}</div> */}
     </section>
   );

@@ -10,9 +10,9 @@ const Header = () => {
       <div className="inner-header">
         <div className="left-part">
           <IconLink link="/" icon={<Logo />} labelledby="logo" />
+          <Searchbar />
         </div>
         <div className="right-part">
-          <Searchbar />
           <IconLink link="/signup">
             <MainButton role="link" innerText="Log in/Sign up" />
           </IconLink>

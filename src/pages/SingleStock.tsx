@@ -6,6 +6,7 @@ import { CustomLinearChart } from "./CustomLinearChart";
 import SecondaryButton from "../components/SecondaryButton";
 
 const SingleStock = () => {
+  const timelineButtons = ["MAX", "YTD", "5Y", "1Y", "6M", "1M", "5D", "1D"];
   const { stockSymbol } = useParams();
 
   const currentStock = arrayStockData.find(stock => {
@@ -18,17 +19,16 @@ const SingleStock = () => {
         <div className="above-chart">
           <Dropdown />
           <div className="stock-buttons-container">
-            <SecondaryButton innerText="MAX" />
-            <SecondaryButton innerText="YTD" />
-            <SecondaryButton innerText="5Y" />
-            <SecondaryButton innerText="1Y" />
-            <SecondaryButton innerText="6M" />
-            <SecondaryButton innerText="1M" />
-            <SecondaryButton innerText="5D" />
-            <SecondaryButton innerText="1D" />
+            {timelineButtons.map(buttonDate => (
+              <SecondaryButton innerText={buttonDate} />
+            ))}
           </div>
         </div>
-        <div className="test">
+        <div
+          style={{
+            height: "70vh",
+          }}
+        >
           <CustomLinearChart />
         </div>
       </div>

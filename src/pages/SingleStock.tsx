@@ -14,13 +14,14 @@ const SingleStock = () => {
   });
 
   return (
+    // TODO: Change from ChartJS to Rechart
     <div className="single-stock">
       <div className="stock-left-part">
         <div className="above-chart">
           <Dropdown />
           <div className="stock-buttons-container">
-            {timelineButtons.map(buttonDate => (
-              <SecondaryButton innerText={buttonDate} />
+            {timelineButtons.map((buttonDate, index) => (
+              <SecondaryButton innerText={buttonDate} key={index} />
             ))}
           </div>
         </div>

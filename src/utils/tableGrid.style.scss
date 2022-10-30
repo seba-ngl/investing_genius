@@ -5,6 +5,10 @@ button {
   cursor: pointer;
 }
 
+.data-row {
+  transition: 0.2s all ease-in-out;
+}
+
 .data-row:hover {
   background-color: #21272f;
 }
@@ -12,6 +16,7 @@ button {
 .grid {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 10px 0;
+
   display: grid;
   justify-content: center;
   align-items: center;

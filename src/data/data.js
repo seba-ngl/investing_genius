@@ -3,7 +3,7 @@ import SNGLogo from "../assets/SNGLogo";
 import SNPLogo from "../assets/SNPLogo";
 import TLVLogo from "../assets/TLVLogo";
 
-export const data = [
+export const arrayStockData = [
   {
     unusedTable: {
       symbol: "tlv",

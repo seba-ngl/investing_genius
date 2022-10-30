@@ -1,21 +1,41 @@
 import { useParams } from "react-router-dom";
-import { data } from "../data/data";
+import Dropdown from "../components/Dropdown";
+import { arrayStockData } from "../data/data";
 import "./singleStock.style.scss";
+import { CustomLinearChart } from "./CustomLinearChart";
+import SecondaryButton from "../components/SecondaryButton";
+
 const SingleStock = () => {
   const { stockSymbol } = useParams();
 
-  const currentStock = data.find(stock => {
+  const currentStock = arrayStockData.find(stock => {
     return stock.unusedTable.symbol === stockSymbol;
   });
 
   return (
-    <section className="single-stock">
-      <div className="stock-right-part">
-        <div className=""></div>
+    <div className="single-stock">
+      <div className="stock-left-part">
+        <div className="above-chart">
+          <Dropdown />
+          <div className="stock-buttons-container">
+            <SecondaryButton innerText="MAX" />
+            <SecondaryButton innerText="YTD" />
+            <SecondaryButton innerText="5Y" />
+            <SecondaryButton innerText="1Y" />
+            <SecondaryButton innerText="6M" />
+            <SecondaryButton innerText="1M" />
+            <SecondaryButton innerText="5D" />
+            <SecondaryButton innerText="1D" />
+          </div>
+        </div>
+        <div className="test">
+          <CustomLinearChart />
+        </div>
       </div>
-      <div className="stock-left-part">s</div>
-      {/* <div>{currentStock?.usedTable.icon}</div> */}
-    </section>
+      <div className="stock-right-part">
+        <div>{currentStock?.usedTable.icon}</div>
+      </div>
+    </div>
   );
 };
 

@@ -4,15 +4,32 @@
   display: flex;
 }
 
-.stock-right-part {
-  background-color: beige;
+.stock-left-part {
+  position: relative;
+  width: 70%;
   min-height: 70vh;
-  width: 80%;
 }
 
-.stock-left-part {
-  background-color: blue;
+.stock-right-part {
   min-height: 70vh;
-  width: calc(20% - 20px);
+  width: calc(30% - 20px);
   margin-left: 20px;
+}
+
+.above-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.stock-buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.test {
+  height: 70vh;
 }

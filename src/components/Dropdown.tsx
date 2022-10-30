@@ -18,17 +18,25 @@ const Dropdown = () => {
   }, [wrapperRef]);
 
   return (
-    <div className="dropdown">
+    <div
+      className="dropdown"
+      onMouseEnter={() => {
+        setShowDropdown(true);
+      }}
+      onMouseLeave={() => {
+        setShowDropdown(false);
+      }}
+    >
       <button
         ref={wrapperRef}
         type="button"
         className="dropdown-toggle"
         tabIndex={0}
         onClick={() => {
-          setShowDropdown(!showDropdown);
+          setShowDropdown(true);
         }}
       >
-        Dropdown
+        Price
       </button>
       {showDropdown ? (
         <div className="dropdown-menu">

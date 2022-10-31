@@ -14,7 +14,6 @@ const SingleStock = () => {
   });
 
   return (
-    // TODO: Change from ChartJS to Rechart
     <div className="single-stock">
       <div className="stock-left-part">
         <div className="above-chart">
@@ -28,6 +27,7 @@ const SingleStock = () => {
         <div
           style={{
             height: "70vh",
+            marginTop: 10,
           }}
         >
           <CustomLinearChart />

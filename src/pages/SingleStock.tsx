@@ -4,6 +4,8 @@ import { arrayStockData } from "../data/data";
 import "./singleStock.style.scss";
 import { CustomLinearChart } from "./CustomLinearChart";
 import SecondaryButton from "../components/SecondaryButton";
+import StockCard from "../components/StockCard";
+import BreadCrumbs from "../components/BreadCrumbs";
 
 const SingleStock = () => {
   const timelineButtons = ["MAX", "YTD", "5Y", "1Y", "6M", "1M", "5D", "1D"];
@@ -16,6 +18,10 @@ const SingleStock = () => {
   return (
     <div className="single-stock">
       <div className="stock-left-part">
+        <div className="breadcrumb">
+          <BreadCrumbs />
+        </div>
+
         <div className="above-chart">
           <Dropdown />
           <div className="stock-buttons-container">
@@ -34,7 +40,7 @@ const SingleStock = () => {
         </div>
       </div>
       <div className="stock-right-part">
-        <div>{currentStock?.usedTable.icon}</div>
+        <StockCard />
       </div>
     </div>
   );

@@ -5,15 +5,20 @@
 }
 
 .stock-left-part {
+  margin-top: 10px;
   position: relative;
   width: 70%;
   min-height: 70vh;
+  .breadcrumb {
+    margin-left: 25px;
+  }
 }
 
 .stock-right-part {
-  min-height: 70vh;
+  margin-top: 10px;
   width: calc(30% - 20px);
   margin-left: 20px;
+  background-color: #20242c;
 }
 
 .above-chart {

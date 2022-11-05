@@ -20,7 +20,7 @@ const TableGrid = ({ data, numberOfColumns }: IProps) => {
 };
 const Row = ({ object, numberOfColumns }: any) => {
   return object.usedTable.name ? (
-    <Link to={`${object.unusedTable.market}/${object.unusedTable.symbol}`}>
+    <Link to={`${object.unusedTable.symbol}`}>
       <button
         tabIndex={-1}
         aria-label={object.usedTable.name}
@@ -35,7 +35,7 @@ const Row = ({ object, numberOfColumns }: any) => {
       </button>
     </Link>
   ) : (
-    <Link to={`${object.unusedTable.market}/${object.unusedTable.symbol}`}>
+    <Link to={`${object.unusedTable.symbol}`}>
       <button
         tabIndex={-1}
         aria-label="no aria"

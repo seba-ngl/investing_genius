@@ -15,11 +15,14 @@ const SingleStock = () => {
     return stock.unusedTable.symbol === stockSymbol;
   });
 
+  const symbol = currentStock?.unusedTable.symbol || "itsDefinitelyNotUndefined";
+  const market = currentStock?.unusedTable.market || "itsDefinitelyNotUndefined";
+
   return (
     <div className="single-stock">
       <div className="stock-left-part">
         <div className="breadcrumb">
-          <BreadCrumbs />
+          <BreadCrumbs links={["home", market, symbol]} />
         </div>
 
         <div className="above-chart">

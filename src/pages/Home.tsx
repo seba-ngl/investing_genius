@@ -1,11 +1,10 @@
-import TableGrid from "../utils/TableGrid";
 import "./home.style.scss";
-import { arrayStockData } from "../data/data";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="home-page">
-      <TableGrid data={arrayStockData} numberOfColumns={5} />
+      <Link to={"/ro"}>Romanian market</Link>
     </div>
   );
 };

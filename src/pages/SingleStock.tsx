@@ -39,7 +39,7 @@ const SingleStock = () => {
             marginTop: 10,
           }}
         >
-          <CustomLinearChart />
+          <CustomLinearChart stockSymbol={symbol} />
         </div>
       </div>
       <div className="stock-right-part">

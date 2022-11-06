@@ -7,48 +7,38 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { prices } from "../data/data";
 
-type IData = {
-  date: string;
-  value: number;
+type IProps = {
+  stockSymbol: string;
 };
 
-let data: IData[] = [
-  {
-    date: "Sunday, 28 Sept, 2022",
-    value: 0.397,
-  },
-  {
-    date: "Sunday, 29 Sept, 2022",
-    value: 0.401,
-  },
-  {
-    date: "Sunday, 30 Sept, 2022",
-    value: 0.4085,
-  },
-  {
-    date: "Sunday, 3 Oct, 2022",
-    value: 0.4315,
-  },
-  {
-    date: "Sunday, 4 Oct, 2022",
-    value: 0.439,
-  },
-];
+export function CustomLinearChart({ stockSymbol }: IProps) {
+  const convertedDate = prices[stockSymbol as keyof typeof prices].map(element => {
+    return {
+      date: new Date(parseInt(element.date) * 1000).getHours() + ":00",
+      value: element.value,
+    };
+  });
 
-export function CustomLinearChart() {
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <AreaChart data={data}>
+      <AreaChart data={convertedDate}>
         <CartesianGrid vertical={false} opacity={0.1} />
         <XAxis
           dataKey="date"
+          tick={false}
           axisLine={false}
           tickLine={false}
           minTickGap={10}
           domain={["auto", "auto"]}
         />
-        <YAxis axisLine={false} tickLine={false} type="number" domain={["auto", "auto"]} />
+        <YAxis
+          axisLine={false}
+          tickLine={false}
+          type="number"
+          domain={["auto", "dataMax + 0.01"]}
+        />
         <Tooltip
           contentStyle={{
             backgroundColor: "#21272f",

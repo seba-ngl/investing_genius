@@ -19,21 +19,21 @@ const BreadCrumbs = ({ links }: IProps) => {
     <nav className="breadcrumbs-comp">
       {links?.map((link, index) =>
         index !== links.length - 1 && index !== 0 ? (
-          <>
-            <Link className="link" to={"/" + link}>
+          <div className="breadcrumbs-comp" key={index}>
+            <Link className="link" to={"/" + link} key={index}>
               {capitalizeFirstLetter(link)}
             </Link>
-            <ArrowSeparator />
-          </>
+            <ArrowSeparator key={index + 10} />
+          </div>
         ) : index === 0 ? (
-          <>
+          <div className="breadcrumbs-comp" key={index}>
             <Link className="link" to={"/"}>
               {capitalizeFirstLetter(link)}
             </Link>
             <ArrowSeparator />
-          </>
+          </div>
         ) : (
-          <div>{capitalizeAllLetters(link)}</div>
+          <div key={index}>{capitalizeAllLetters(link)}</div>
         )
       )}
     </nav>

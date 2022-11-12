@@ -19,6 +19,13 @@ const TableGrid = ({ data, numberOfColumns }: IProps) => {
   );
 };
 const Row = ({ object, numberOfColumns }: any) => {
+  const formattedMarketCap = (s: number) => {
+    return Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    }).format(s);
+  };
+
   return object.usedTable.name ? (
     <Link to={`${object.unusedTable.symbol}`}>
       <button
@@ -30,7 +37,17 @@ const Row = ({ object, numberOfColumns }: any) => {
         }}
       >
         {Object.keys(object.usedTable).map(key => {
-          return key !== "name" ? <div key={key}>{object.usedTable[key]}</div> : "";
+          return key !== "name" ? (
+            key === "valuation" ? (
+              <div key={key}>
+                {formattedMarketCap(object.unusedTable.nrShares * object.usedTable.price)}
+              </div>
+            ) : (
+              <div key={key}>{object.usedTable[key]}</div>
+            )
+          ) : (
+            ""
+          );
         })}
       </button>
     </Link>

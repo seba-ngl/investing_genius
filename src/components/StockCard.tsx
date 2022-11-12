@@ -8,6 +8,12 @@ const StockCard = () => {
   const currentStock = arrayStockData.find(stock => {
     return stock.unusedTable.symbol === stockSymbol;
   });
+
+  const formattedMarketCap = Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(currentStock!.unusedTable.nrShares * currentStock!.usedTable.price);
+
   return (
     <div className="stock-card">
       <div className="card-info">
@@ -28,8 +34,8 @@ const StockCard = () => {
           <div>{currentStock?.unusedTable.market}</div>
         </div>
         <div className="info">
-          <div className="name">Valuation</div>
-          <div>{currentStock?.usedTable.valuation}</div>
+          <div className="name">Market Cap</div>
+          <div>{formattedMarketCap} lei</div>
         </div>
         <div className="label">Financials</div>
         <div className="info">

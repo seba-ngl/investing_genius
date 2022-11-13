@@ -1,3 +1,4 @@
+import BRDLogo from "../assets/BRDLogo";
 import SNGLogo from "../assets/SNGLogo";
 import SNNLogo from "../assets/SNNLogo";
 import SNPLogo from "../assets/SNPLogo";
@@ -66,6 +67,22 @@ export const arrayStockData = [
       valuation: "",
       divYield: 6,
       industry: "Electric Utilities",
+    },
+  },
+  {
+    unusedTable: {
+      symbol: "brd",
+      market: "ro",
+      eps: 2.1,
+      nrShares: 696901518,
+    },
+    usedTable: {
+      name: "BRD",
+      icon: <BRDLogo />,
+      price: 12.76,
+      valuation: "",
+      divYield: 6,
+      industry: "Banking",
     },
   },
 ];
@@ -827,6 +844,12 @@ export const prices = {
       value: 41,
     },
   ],
+  brd: [
+    {
+      date: "1665558000",
+      value: 41,
+    },
+  ],
 };
 
 export const profits = {
@@ -892,6 +915,24 @@ export const profits = {
     {
       date: "1656572400",
       value: 1046479000,
+    },
+  ],
+  brd: [
+    {
+      date: "1640937600",
+      value: 400000000,
+    },
+    {
+      date: "1648623600",
+      value: 263222000,
+    },
+    {
+      date: "1656572400",
+      value: 616771000,
+    },
+    {
+      date: "1664521200",
+      value: 1015578000,
     },
   ],
 };

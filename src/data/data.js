@@ -8,15 +8,14 @@ export const arrayStockData = [
     unusedTable: {
       symbol: "tlv",
       market: "ro",
-      pe: 12.2,
       eps: 3,
       nrShares: 707658233,
     },
     usedTable: {
       name: "Banca transilvania",
       icon: <TLVLogo />,
-      price: 15,
-      valuation: "14b",
+      price: 19.52,
+      valuation: "",
       divYield: 6,
       industry: "Banking",
     },
@@ -25,15 +24,14 @@ export const arrayStockData = [
     unusedTable: {
       symbol: "snp",
       market: "ro",
-      pe: 4.5,
       eps: 0.02,
       nrShares: 62311667058,
     },
     usedTable: {
       name: "OMV Petrom",
       icon: <SNPLogo />,
-      price: 15,
-      valuation: "12b",
+      price: 0.451,
+      valuation: "",
       divYield: 8,
       industry: "Energy",
     },
@@ -42,25 +40,22 @@ export const arrayStockData = [
     unusedTable: {
       symbol: "sng",
       market: "ro",
-      pe: 8.2,
       eps: 2.1,
       nrShares: 385422400,
     },
     usedTable: {
       name: "Romgaz",
       icon: <SNGLogo />,
-      price: 15,
-      valuation: "9b",
+      price: 41.4,
+      valuation: "",
       divYield: 6,
       industry: "Gas",
     },
   },
-
   {
     unusedTable: {
       symbol: "snn",
       market: "ro",
-      pe: 8.2,
       eps: 2.1,
       nrShares: 301643894,
     },
@@ -68,7 +63,7 @@ export const arrayStockData = [
       name: "Nuclearelectrica",
       icon: <SNNLogo />,
       price: 39.65,
-      valuation: "9b",
+      valuation: "",
       divYield: 6,
       industry: "Electric Utilities",
     },
@@ -812,6 +807,91 @@ export const prices = {
     {
       date: "1668178800",
       value: 42.8,
+    },
+  ],
+  sng: [
+    {
+      date: "1665558000",
+      value: 41,
+    },
+  ],
+  snp: [
+    {
+      date: "1665558000",
+      value: 41,
+    },
+  ],
+  tlv: [
+    {
+      date: "1665558000",
+      value: 41,
+    },
+  ],
+};
+
+export const profits = {
+  snn: [
+    {
+      date: "1640937600",
+      value: 1036038559,
+    },
+    {
+      date: "1648623600",
+      value: 818901388,
+    },
+    {
+      date: "1656572400",
+      value: 1219573312,
+    },
+    {
+      date: "1664521200",
+      value: 1939091000,
+    },
+  ],
+  sng: [
+    {
+      date: "1640937600",
+      value: 1914987000,
+    },
+    {
+      date: "1648623600",
+      value: 973621000,
+    },
+    {
+      date: "1656572400",
+      value: 1725945000,
+    },
+  ],
+  snp: [
+    {
+      date: "1640937600",
+      value: 2864330000,
+    },
+    {
+      date: "1648623600",
+      value: 1748330000,
+    },
+    {
+      date: "1656572400",
+      value: 4646050000,
+    },
+    {
+      date: "1664521200",
+      value: 9155600000,
+    },
+  ],
+  tlv: [
+    {
+      date: "1640937600",
+      value: 2024533000,
+    },
+    {
+      date: "1648623600",
+      value: 400334000,
+    },
+    {
+      date: "1656572400",
+      value: 1046479000,
     },
   ],
 };

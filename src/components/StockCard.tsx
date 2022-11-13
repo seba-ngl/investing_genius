@@ -1,12 +1,29 @@
 import { useParams } from "react-router-dom";
-import { arrayStockData } from "../data/data";
+import { arrayStockData, profits } from "../data/data";
 import "./stockCard.style.scss";
 
 const StockCard = () => {
   const { stockSymbol } = useParams();
 
+  const addArrayElements = (arrayOfObjects: any) => {
+    let sum = 0;
+    for (let i = 0; i < arrayOfObjects.length; i++) sum += arrayOfObjects[i].value;
+
+    return sum;
+  };
+
   const currentStock = arrayStockData.find(stock => {
     return stock.unusedTable.symbol === stockSymbol;
+  });
+
+  // TODO: Make this code cleaner, typescript really screwed my brain here
+  let aux;
+  let lastFourProfits: any = [];
+  Object.entries(profits).forEach(entry => {
+    if (entry[0] === stockSymbol) {
+      aux = entry[1];
+      for (let i = 0; i < aux?.length; i++) lastFourProfits.push(aux[i]);
+    }
   });
 
   const formattedMarketCap = Intl.NumberFormat("en-US", {
@@ -14,6 +31,9 @@ const StockCard = () => {
     maximumFractionDigits: 1,
   }).format(currentStock!.unusedTable.nrShares * currentStock!.usedTable.price);
 
+  const eps = addArrayElements(lastFourProfits) / currentStock!.unusedTable.nrShares;
+
+  // TODO: Use map function instead for cleaner code
   return (
     <div className="stock-card">
       <div className="card-info">
@@ -40,11 +60,11 @@ const StockCard = () => {
         <div className="label">Financials</div>
         <div className="info">
           <div className="name">P/E</div>
-          <div>{currentStock?.unusedTable.pe}</div>
+          <div>{parseFloat((currentStock!.usedTable.price / eps).toFixed(2))}</div>
         </div>
         <div className="info">
           <div className="name">EPS</div>
-          <div>{currentStock?.unusedTable.eps}</div>
+          <div>{parseFloat(eps.toFixed(2))}</div>
         </div>
         <div className="info">
           <div className="name">Div yield</div>

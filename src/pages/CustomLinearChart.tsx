@@ -14,7 +14,7 @@ type IProps = {
 };
 
 export function CustomLinearChart({ stockSymbol }: IProps) {
-  const convertedDate = prices[stockSymbol as keyof typeof prices].map(element => {
+  const convertedDate = prices["snn"].map(element => {
     return {
       date: new Date(parseInt(element.date) * 1000).getHours() + ":00",
       value: element.value,

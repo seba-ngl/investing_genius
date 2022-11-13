@@ -1,4 +1,5 @@
 import BRDLogo from "../assets/BRDLogo";
+import FPLogo from "../assets/FPLogo";
 import SNGLogo from "../assets/SNGLogo";
 import SNNLogo from "../assets/SNNLogo";
 import SNPLogo from "../assets/SNPLogo";
@@ -9,7 +10,7 @@ export const arrayStockData = [
     unusedTable: {
       symbol: "tlv",
       market: "ro",
-      eps: 3,
+      eps: 0,
       nrShares: 707658233,
     },
     usedTable: {
@@ -25,7 +26,7 @@ export const arrayStockData = [
     unusedTable: {
       symbol: "snp",
       market: "ro",
-      eps: 0.02,
+      eps: 0,
       nrShares: 62311667058,
     },
     usedTable: {
@@ -41,7 +42,7 @@ export const arrayStockData = [
     unusedTable: {
       symbol: "sng",
       market: "ro",
-      eps: 2.1,
+      eps: 0,
       nrShares: 385422400,
     },
     usedTable: {
@@ -57,7 +58,7 @@ export const arrayStockData = [
     unusedTable: {
       symbol: "snn",
       market: "ro",
-      eps: 2.1,
+      eps: 0,
       nrShares: 301643894,
     },
     usedTable: {
@@ -73,7 +74,7 @@ export const arrayStockData = [
     unusedTable: {
       symbol: "brd",
       market: "ro",
-      eps: 2.1,
+      eps: 0,
       nrShares: 696901518,
     },
     usedTable: {
@@ -83,6 +84,22 @@ export const arrayStockData = [
       valuation: "",
       divYield: 6,
       industry: "Banking",
+    },
+  },
+  {
+    unusedTable: {
+      symbol: "fp",
+      market: "ro",
+      eps: 0,
+      nrShares: 6217825213,
+    },
+    usedTable: {
+      name: "Fondul proprietatea",
+      icon: <FPLogo />,
+      price: 1.88,
+      valuation: "",
+      divYield: 6,
+      industry: "Capital Markets",
     },
   },
 ];
@@ -850,6 +867,12 @@ export const prices = {
       value: 41,
     },
   ],
+  fp: [
+    {
+      date: "1665558000",
+      value: 41,
+    },
+  ],
 };
 
 export const profits = {
@@ -933,6 +956,20 @@ export const profits = {
     {
       date: "1664521200",
       value: 1015578000,
+    },
+  ],
+  fp: [
+    {
+      date: "1640937600",
+      value: 5012644707,
+    },
+    {
+      date: "1648623600",
+      value: 826124670,
+    },
+    {
+      date: "1656572400",
+      value: 4129747178,
     },
   ],
 };

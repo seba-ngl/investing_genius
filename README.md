@@ -1,6 +1,8 @@
 # Investing genius
 
-LIVE APPLICATION: https://seba-ngl.github.io/ro
+LIVE APPLICATION: https://seba-ngl.github.io/investing_genius/
+
+(click the logo so github doesn't break the routing)
 
 
 An investing application that tracks the top companies from the BVB exchange market and calculates some important metrics such as P/E, EPS, market cap etc.

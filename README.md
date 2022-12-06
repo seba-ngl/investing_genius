@@ -1,5 +1,7 @@
 # Investing genius
 
+WORK IN PROGRESS
+
 LIVE APPLICATION: https://seba-ngl.github.io/investing_genius/
 
 (click the logo so github doesn't break the routing)

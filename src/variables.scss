@@ -1,0 +1,29 @@
+[data-theme="dark"] {
+  --body-bg: #0c0e14;
+  --secondary-bg: #1e1e29;
+  --main-border: transparent;
+  --main-text-color: white;
+  --main-emphasis: #2e7f97;
+  --secondary-emphasis: rgb(27, 34, 45);
+  --main-hover: #3e92cc;
+  --secondary-hover: #313c4e;
+  --faded-gray: rgba(255, 255, 255, 0.1);
+  --light-gray: rgba(255, 255, 255, 0.5);
+  --separator1: #22293d;
+  --main-border: transparent;
+}
+
+[data-theme="light"] {
+  --body-bg: white;
+  --secondary-bg: white;
+  --main-border: black;
+  --main-text-color: black;
+  --main-emphasis: #029ac9;
+  --secondary-emphasis: #ddd;
+  --main-hover: #2b4457;
+  --secondary-hover: #bac5cf;
+  --faded-gray: gray;
+  --light-gray: gray;
+  --separator1: #bfcae8;
+  --main-border: black;
+}

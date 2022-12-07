@@ -1,0 +1,24 @@
+@use "../variables.scss";
+
+.container {
+  z-index: 100;
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  button {
+    font-size: 20px;
+    border: 1px solid var(--main-emphasis);
+    gap: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--main-text-color);
+    padding: 8px 16px;
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+  }
+}

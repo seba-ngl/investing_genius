@@ -1,0 +1,10 @@
+@use "variables.scss";
+
+.home {
+  padding-bottom: 32px;
+  min-height: 100vh;
+  background-color: var(--body-bg);
+  .test {
+    color: var(--main-text-color);
+  }
+}

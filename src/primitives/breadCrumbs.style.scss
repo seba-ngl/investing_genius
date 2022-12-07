@@ -1,0 +1,8 @@
+.breadcrumbs-comp {
+  display: flex;
+  gap: 8px;
+  color: var(--light-gray);
+  .link {
+    color: var(--main-text-color);
+  }
+}

@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.rounded-card {
+  padding: 32px;
+  background-color: var(--secondary-bg);
+  border-radius: 20px;
+  border: 1px solid var(--main-border);
+}

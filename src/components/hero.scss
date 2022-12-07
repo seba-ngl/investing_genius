@@ -1,0 +1,19 @@
+.hero {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0px 32px;
+  margin-top: 32px;
+  .hero-header {
+    margin-bottom: 32px;
+
+    @media (min-width: 700px) {
+      & {
+        margin-bottom: 32px;
+      }
+    }
+  }
+  .main-text {
+    color: var(--main-text-color);
+    margin-bottom: 32px;
+  }
+}

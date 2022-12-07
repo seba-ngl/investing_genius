@@ -1,0 +1,70 @@
+@use "../variables.scss";
+
+.table {
+  width: 100%;
+  color: var(--main-text-color);
+  border-collapse: collapse;
+
+  .td {
+    color: var(--main-text-color);
+  }
+  .td,
+  .th {
+    padding: 4px 0;
+    border: 1px solid var(--separator1);
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .th {
+    padding: 8px 15px;
+  }
+
+  .tr {
+    cursor: pointer;
+    display: flex;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .tbody .tr:hover {
+    background-color: var(--secondary-hover);
+  }
+
+  @media (max-width: 700px) {
+    .thead {
+      display: none;
+    }
+
+    &,
+    .tbody,
+    .tr,
+    .td {
+      display: block;
+    }
+
+    .tr {
+      margin-bottom: 36px;
+    }
+
+    .td {
+      text-align: right;
+      position: relative;
+      padding: 8px 16px;
+    }
+    .tbody .td:first-child {
+      text-align: center;
+      font-size: 0;
+    }
+
+    .td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      padding-left: 16px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+}

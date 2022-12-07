@@ -1,0 +1,54 @@
+.stock-card {
+  height: 100%;
+  .card-info {
+    display: flex;
+    padding-bottom: 0;
+    .icon {
+      display: none;
+    }
+    @media (min-width: 300px) {
+      .icon {
+        display: inline-block;
+      }
+    }
+    .names {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @media (min-width: 300px) {
+        margin-left: 16px;
+      }
+    }
+    .title {
+      color: var(--main-text-color);
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .symbol {
+      color: var(--main-text-color);
+    }
+  }
+  .card-data {
+    padding-bottom: 16px;
+    .label {
+      color: var(--main-text-color);
+      margin-top: 16px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .info {
+      border-bottom: 1px solid var(--faded-gray);
+      padding: 16px 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .key {
+        color: var(--light-gray);
+      }
+      .value {
+        color: var(--main-text-color);
+      }
+    }
+  }
+}

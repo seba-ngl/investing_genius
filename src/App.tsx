@@ -11,7 +11,8 @@ const App = () => {
     <div className="home" data-theme={theme}>
       <Navbar theme={theme} setTheme={setTheme} />
       <Routes>
-        <Route path="/" element={<Hero />} />
+        {/* remove this if in local  */}
+        <Route path="/investing_genius/" element={<Hero />} />
         <Route path="/stocks/bvb/:stockSymbol" element={<SingleStock />} />
         <Route path="/*" element={<div>Page not found</div>} />
       </Routes>

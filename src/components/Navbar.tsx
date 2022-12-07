@@ -13,7 +13,7 @@ type IProps = {
 const Navbar = ({ theme, setTheme }: IProps) => {
   return (
     <div className="navbar">
-      <Link to={"/"}>
+      <Link to={"/investing_genius/"}>
         <Logo theme={theme} />
       </Link>
       <div className="right-part nav-desktop">
